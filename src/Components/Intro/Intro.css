@@ -1,0 +1,181 @@
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* shadow gives the uplifted effect */
+  transform: translateY(-10px); /* moves it slightly up */
+  z-index: 10;
+  position: relative;
+}
+
+/* Greeting styles with language rotation */
+.greeting-wrapper {
+  margin-bottom: 1.5rem;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.greeting {
+  font-size: 3rem;
+  margin: 0;
+  opacity: 1;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.greeting-language {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin: 0.5rem 0 0 0;
+  font-style: italic;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Name section styles */
+.name-container {
+  margin-bottom: 3rem;
+
+}
+
+.pre-name {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  color: #ccc;
+}
+
+.name {
+  font-size: 6rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(
+    to right,
+    #ff7e5f, #feb47b, #ffcf96, #88d3ce, #6e45e2, #d53369
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientFlow 10s ease infinite;
+  letter-spacing: -1px;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Social links styles */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #222;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, transparent);
+  z-index: -1;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.social-btn:hover {
+  transform: scale(1.15);
+  z-index: 2;
+}
+
+.social-btn:hover::before {
+  opacity: 1;
+  animation: rotateBorder 1.5s linear infinite;
+}
+
+.social-btn.linkedin:hover::before {
+  background: linear-gradient(45deg, #0077b5, #00a0dc);
+}
+
+.social-btn.github:hover::before {
+  background: linear-gradient(45deg, #6e5494, #c9510c);
+}
+
+.social-btn.twitter:hover::before {
+  background: linear-gradient(45deg, #1da1f2, #14171a);
+}
+
+.social-btn.instagram:hover::before {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+}
+
+.social-btn.leetcode:hover::before {
+  background: linear-gradient(45deg, #ffa116, #ffde59);
+}
+
+@keyframes rotateBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .greeting {
+    font-size: 2.5rem;
+  }
+  
+  .name {
+    font-size: 3.5rem;
+  }
+  
+  .social-links {
+    gap: 1rem;
+  }
+  
+  .social-btn {
+    width: 45px;
+    height: 45px;
+  }
+}
