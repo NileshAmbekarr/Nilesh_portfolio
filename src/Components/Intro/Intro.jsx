@@ -20,7 +20,15 @@ const Intro = () => {
       setCurrentGreetingIndex((prevIndex) => (prevIndex + 1) % greetings.length);
     }, 2000);
 
-    return () => clearInterval(interval);
+    // Import Google Fonts
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Kristi&display=swap';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
+
+    return () => {
+      clearInterval(interval);
+    };
   }, []);
 
   return (
@@ -36,24 +44,75 @@ const Intro = () => {
       </div>
       
       <div className="social-links">
-        <button className="social-btn linkedin">
-          {/* LinkedIn icon will go here */}
-        </button>
-        <button className="social-btn github">
-          {/* GitHub icon will go here */}
-        </button>
-        <button className="social-btn twitter">
-          {/* X/Twitter icon will go here */}
-        </button>
-        <button className="social-btn instagram">
-          {/* Instagram icon will go here */}
-        </button>
-        <button className="social-btn leetcode">
-          {/* LeetCode icon will go here */}
-        </button>
+        <div className="social-item">
+          <a href="https://www.linkedin.com/in/nileshambekar/" target="_blank" rel="noopener noreferrer" className="social-link">
+            <div className="social-btn linkedin">
+              <img src="/src/assets/Socialicons/LINKEDIN.png" alt="LinkedIn"/>
+            </div>
+            <span className="social-name">LinkedIn</span>
+          </a>
+          <div className="social-hover-card">
+            {/* LinkedIn profile info will go here */}
+          </div>
+        </div>
+        
+        <div className="social-item">
+          <a href="https://github.com/NileshAmbekarr" target="_blank" rel="noopener noreferrer" className="social-link">
+            <div className="social-btn github">
+              <img src="/src/assets/Socialicons/github.png" alt="GitHub" />
+            </div>
+            <span className="social-name">GitHub</span>
+          </a>
+          <div className="social-hover-card">
+            {/* GitHub profile info will go here */}
+          </div>
+        </div>
+        
+        <div className="social-item">
+          <a href="https://x.com/nileshambekar_" target="_blank" rel="noopener noreferrer" className="social-link">
+            <div className="social-btn twitter">
+              <img src="/src/assets/Socialicons/X.png" alt="X" />
+            </div>
+            <span className="social-name">Twitter</span>
+          </a>
+          <div className="social-hover-card">
+            {/* Twitter profile info will go here */}
+          </div>
+        </div>
+        
+        <div className="social-item">
+          <a href="https://www.instagram.com/niilesh_ambekar" target="_blank" rel="noopener noreferrer" className="social-link">
+            <div className="social-btn instagram">
+              <img src="/src/assets/Socialicons/instagram.png" alt="Instagram" />
+            </div>
+            <span className="social-name">Instagram</span>
+          </a>
+          <div className="social-hover-card">
+            {/* Instagram profile info will go here */}
+          </div>
+        </div>
+        
+        <div className="social-item">
+          <a href="https://leetcode.com/u/nilesh_ambekar/" target="_blank" rel="noopener noreferrer" className="social-link">
+            <div className="social-btn leetcode">
+              <img width="32" height="32" src="https://img.icons8.com/small/32/leetcode.png" alt="leetcode"/>
+            </div>
+            <span className="social-name">LeetCode</span>
+          </a>
+          <div className="social-hover-card">
+            {/* LeetCode profile info will go here */}
+          </div>
+        </div>
+      </div>
+      
+      <div className="resume-container">
+        <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-button">
+          <span className="resume-text">Resume</span>
+        </a>
       </div>
     </div>
   );
 };
 
 export default Intro;
+
