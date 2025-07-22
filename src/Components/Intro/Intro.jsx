@@ -35,19 +35,20 @@ const Intro = () => {
     <div className="intro-container">
       <div className="greeting-wrapper">
         <h2 className="greeting">{greetings[currentGreetingIndex].text}</h2>
-        <p className="greeting-language">{greetings[currentGreetingIndex].language}</p>
+        {/* <p className="greeting-language">{greetings[currentGreetingIndex].language}</p> */}
       </div>
       
       <div className="name-container">
         <p className="pre-name">I am</p>
         <h1 className="name">Nilesh Ambekar</h1>
+        <p>:)</p>
       </div>
       
       <div className="social-links">
         <div className="social-item">
           <a href="https://www.linkedin.com/in/nileshambekar/" target="_blank" rel="noopener noreferrer" className="social-link">
             <div className="social-btn linkedin">
-              <img src="/src/assets/Socialicons/LINKEDIN.png" alt="LinkedIn"/>
+              <img src="/src/assets/Socialicons/linkedin.svg" alt="LinkedIn"/>
             </div>
             <span className="social-name">LinkedIn</span>
           </a>
@@ -95,7 +96,7 @@ const Intro = () => {
         <div className="social-item">
           <a href="https://leetcode.com/u/nilesh_ambekar/" target="_blank" rel="noopener noreferrer" className="social-link">
             <div className="social-btn leetcode">
-              <img width="32" height="32" src="https://img.icons8.com/small/32/leetcode.png" alt="leetcode"/>
+              <img width="32" height="32" src="/src/assets/Socialicons/leetcode.png" alt="leetcode"/>
             </div>
             <span className="social-name">LeetCode</span>
           </a>
@@ -106,7 +107,7 @@ const Intro = () => {
       </div>
       
       <div className="resume-container">
-        <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-button">
+        <a href="https://drive.google.com/file/d/17oe735CQyuAIAMDold-ucqu6TOsmrwvP/view" target="_blank" rel="noopener noreferrer" className="resume-button">
           <span className="resume-text">Resume</span>
         </a>
       </div>
