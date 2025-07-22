@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Intro.css';
+// Import social icons directly
+import linkedinIcon from '../../assets/Socialicons/linkedin.svg';
+import githubIcon from '../../assets/Socialicons/github.png';
+import twitterIcon from '../../assets/Socialicons/X.png';
+import instagramIcon from '../../assets/Socialicons/instagram.png';
+import leetcodeIcon from '../../assets/Socialicons/leetcode.png';
 
 const Intro = () => {
   const greetings = [
@@ -48,7 +54,7 @@ const Intro = () => {
         <div className="social-item">
           <a href="https://www.linkedin.com/in/nileshambekar/" target="_blank" rel="noopener noreferrer" className="social-link">
             <div className="social-btn linkedin">
-              <img src="/src/assets/Socialicons/linkedin.svg" alt="LinkedIn"/>
+              <img src={linkedinIcon} alt="LinkedIn"/>
             </div>
             <span className="social-name">LinkedIn</span>
           </a>
@@ -60,7 +66,7 @@ const Intro = () => {
         <div className="social-item">
           <a href="https://github.com/NileshAmbekarr" target="_blank" rel="noopener noreferrer" className="social-link">
             <div className="social-btn github">
-              <img src="/src/assets/Socialicons/github.png" alt="GitHub" />
+              <img src={githubIcon} alt="GitHub" />
             </div>
             <span className="social-name">GitHub</span>
           </a>
@@ -72,7 +78,7 @@ const Intro = () => {
         <div className="social-item">
           <a href="https://x.com/nileshambekar_" target="_blank" rel="noopener noreferrer" className="social-link">
             <div className="social-btn twitter">
-              <img src="/src/assets/Socialicons/X.png" alt="X" />
+              <img src={twitterIcon} alt="X" />
             </div>
             <span className="social-name">Twitter</span>
           </a>
@@ -84,7 +90,7 @@ const Intro = () => {
         <div className="social-item">
           <a href="https://www.instagram.com/niilesh_ambekar" target="_blank" rel="noopener noreferrer" className="social-link">
             <div className="social-btn instagram">
-              <img src="/src/assets/Socialicons/instagram.png" alt="Instagram" />
+              <img src={instagramIcon} alt="Instagram" />
             </div>
             <span className="social-name">Instagram</span>
           </a>
@@ -96,7 +102,7 @@ const Intro = () => {
         <div className="social-item">
           <a href="https://leetcode.com/u/nilesh_ambekar/" target="_blank" rel="noopener noreferrer" className="social-link">
             <div className="social-btn leetcode">
-              <img width="32" height="32" src="/src/assets/Socialicons/leetcode.png" alt="leetcode"/>
+              <img width="32" height="32" src={leetcodeIcon} alt="leetcode"/>
             </div>
             <span className="social-name">LeetCode</span>
           </a>
@@ -107,8 +113,8 @@ const Intro = () => {
       </div>
       
       <div className="resume-container">
-        <a href="https://drive.google.com/file/d/17oe735CQyuAIAMDold-ucqu6TOsmrwvP/view" target="_blank" rel="noopener noreferrer" className="resume-button">
-          <span className="resume-text">Resume</span>
+        <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer" className="resume-button">
+          <span className="resume-text">View Resume</span>
         </a>
       </div>
     </div>
