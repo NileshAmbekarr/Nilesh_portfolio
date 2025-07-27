@@ -1,4 +1,4 @@
-import DoctorSearch from '../../assets/ProjectImages/DoctorSearch.png'
+import DoctorSearch from '../../assets/ProjectImages/Doctorsearch.png'
 import JobPortal from '../../assets/ProjectImages/Jobportal.png'
 import MarathiLang from '../../assets/ProjectImages/Marathilang.png'
 
