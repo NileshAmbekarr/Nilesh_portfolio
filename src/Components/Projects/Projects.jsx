@@ -1,6 +1,7 @@
 import React from 'react';
 import './Projects.css';
 import projects from './projectsData';
+import githubIcon from '../../assets/Socialicons/github.png'
 
 const Projects = () => {
   return (
@@ -21,7 +22,7 @@ const Projects = () => {
               <div className="project-links">
 
                 <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-btn github"> 
-                    <img src="/src/assets/SocialIcons/github.png" alt="" style={{
+                      <img src={githubIcon} alt="" style={{
                         height: '20px',
                         width: '20px',
                         marginRight: '10px',
@@ -37,7 +38,7 @@ const Projects = () => {
       </div>
       <div className="view-more-container">
         <a href="https://github.com/NileshAmbekarr?tab=repositories" target="_blank" rel="noopener noreferrer" className="view-more-btn">
-        <img src="/src/assets/SocialIcons/github.png" alt="" style={{
+        <img src={githubIcon} alt="" style={{
                         height: '20px',
                         width: '20px',
                         marginRight: '10px',
