@@ -9,17 +9,19 @@ import './App.css'
 function App() {
 
   return (
-    <>
-      <RippleCursor/>
-      <Spotlight />
-      <Navbar />
-      <Intro />
-      <About />
-      <Projects />
-      <br />
-      <p>abhi ke liye bas itna hi</p>
-      <p>more content coming soon...😉</p>
-    </>
+    <div style={{ position: 'relative' }}>
+        <div className="background-pattern"></div>
+
+        <RippleCursor />
+        <Spotlight />
+        <Navbar />
+        <Intro />
+        <About />
+        <Projects />
+        <br />
+        <p>abhi ke liye bas itna hi</p>
+        <p>more content coming soon...😉</p>
+  </div>
   )
 }
 
