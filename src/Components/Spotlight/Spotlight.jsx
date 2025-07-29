@@ -20,7 +20,7 @@ const Spotlight = () => {
         width: "100vw",
         height: "100vh",
         pointerEvents: "none",
-        background: `radial-gradient(circle at ${position.x}px ${position.y}px, rgba(0, 40, 218, 0.15) 0%, transparent 50%)`,
+        background: `radial-gradient(circle at ${position.x}px ${position.y}px, rgba(0, 40, 218, 0.15) 0%, transparent 30%)`,
         mixBlendMode: "lighten",
         zIndex: 1,
       }}

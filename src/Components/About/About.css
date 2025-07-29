@@ -37,7 +37,7 @@
 
 .about-text-container {
   background-color: transparent;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(1.5px);
   border-radius: 15px;
   padding: 2rem;
   margin-bottom: 2rem;

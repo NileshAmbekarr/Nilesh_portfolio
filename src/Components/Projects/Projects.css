@@ -5,7 +5,7 @@
   margin: 1rem  2rem ;
   max-width: 1200px;
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25); */
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(1.5px);
 }
 
 .projects-title {
