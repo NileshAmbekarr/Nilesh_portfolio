@@ -4,6 +4,7 @@ import About from './Components/About/About'
 import Projects from './Components/Projects/Projects'
 import Spotlight from './Components/Spotlight/Spotlight'
 import RippleCursor from './Components/Cursor/RippleCursor'
+import FloatingSkills from './Components/Skills/Skills'
 import './App.css'
 
 function App() {
@@ -12,12 +13,13 @@ function App() {
     <div style={{ position: 'relative' }}>
         <div className="background-pattern"></div>
 
-        <RippleCursor />
+        {/* <RippleCursor /> */}
         <Spotlight />
         <Navbar />
         <Intro />
         <About />
         <Projects />
+        <FloatingSkills />
         <br />
         <p>abhi ke liye bas itna hi</p>
         <p>more content coming soon...😉</p>
