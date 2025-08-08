@@ -28,7 +28,7 @@
     height: 600px;
     border-radius: 15px;
     background:transparent;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(1px); */
     /* border: 1px solid rgba(255, 255, 255, 0.2); */
   }
   
@@ -38,7 +38,7 @@
     height: 60px;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: left 0.8s ease, top 0.8s ease;
     cursor: pointer;
     z-index: 5;
   }
@@ -112,7 +112,7 @@
     padding: 6px 16px;
     border-radius: 20px;
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(19, 7, 183, 0.399);
     white-space: nowrap;
   }
   
@@ -129,7 +129,7 @@
     align-items: center;
     gap: 10px;
     z-index: 1000;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   }

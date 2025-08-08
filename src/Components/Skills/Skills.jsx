@@ -1,5 +1,5 @@
 // FloatingSkills.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { skillsData } from './SkillsData.js';
 import './Skills.css';
 
@@ -84,15 +84,37 @@ const FloatingSkills = () => {
     });
   };
 
+   // Allow state updates for rearrangement
+  const [positions, setPositions] = useState(() => generateNonOverlappingPositions());
+  const shuffleCooldownRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    // If currently cooling down, ignore extra enters
+    if (shuffleCooldownRef.current) return;
+
+    // Regenerate positions (non-overlapping)
+    setPositions(generateNonOverlappingPositions());
+
+    // Optional: briefly toggle mounted to re-trigger mount animations (uncomment if you want)
+    // setMounted(false);
+    // setTimeout(() => setMounted(true), 20);
+
+    // Start cooldown (800ms) to avoid spamming reshuffle
+    shuffleCooldownRef.current = setTimeout(() => {
+      shuffleCooldownRef.current = null;
+    }, 800);
+  };
+
   // Generate positions once when component mounts
-  const [positions] = useState(() => generateNonOverlappingPositions());
+
+
 
   const clusterKeys = Object.keys(skillsData);
 
   return (
-    <div className="skills-container">
+    <div className="skills-container" id='skills'>
       <h2 className="skills-title">My Skills</h2>
-      <div className="skills-universe">
+      <div className="skills-universe" onMouseEnter={handleMouseEnter} >
         {clusterKeys.map((clusterName, clusterIndex) => {
           const cluster = skillsData[clusterName];
           return cluster.skills.map((skill, skillIndex) => {
@@ -124,8 +146,8 @@ const FloatingSkills = () => {
           });
         })}
         
-        {/* Cluster Labels - positioned at cluster centers */}
-        {/* {clusterKeys.map((clusterName, index) => {
+        {/* Cluster Labels - positioned at cluster centers
+        {clusterKeys.map((clusterName, index) => {
           // Find the center position of skills in this cluster
           const clusterSkillPositions = positions.filter(pos => pos.clusterName === clusterName);
           if (clusterSkillPositions.length === 0) return null;
