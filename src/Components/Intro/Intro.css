@@ -73,6 +73,21 @@
   letter-spacing: 2px;
 }
 
+.svg-container{
+  width: 20%;
+  height: auto;
+  display: center;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  /* border: solid 2px red; */
+  margin: 0, auto;
+  z-index: 2;
+  position: relative;
+  top: -30px;
+  right: -20px;
+}
+
 @keyframes gradientFlow {
   0% {
     background-position: 0% 50%;
