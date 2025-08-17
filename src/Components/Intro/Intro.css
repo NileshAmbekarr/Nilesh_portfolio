@@ -143,8 +143,24 @@
 }
 
 .social-btn img {
-  max-width: 70%;
+  max-width: 100%;
   max-height: 70%;
+}
+
+.social-btn.tuf {
+  width: 100%; /* or a specific width if you want */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* optional: remove extra padding */
+  background: none; /* optional: remove background if not needed */
+}
+
+.social-btn.tuf img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* ensures the image scales nicely */
 }
 
 .social-name {

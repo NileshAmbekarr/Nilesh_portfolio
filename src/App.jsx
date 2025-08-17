@@ -5,6 +5,7 @@ import Projects from './Components/Projects/Projects'
 import Spotlight from './Components/Spotlight/Spotlight'
 import RippleCursor from './Components/Cursor/RippleCursor'
 import FloatingSkills from './Components/Skills/Skills'
+import Timeline from './Components/Timeline/Timeline'
 import './App.css'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <About />
         <Projects />
         <FloatingSkills />
+        {/* <Timeline/> */}
         <br />
         <p>abhi ke liye bas itna hi</p>
         <p>more content coming soon...😉</p>

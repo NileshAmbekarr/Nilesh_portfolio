@@ -6,7 +6,8 @@ import linkedinIcon from '../../assets/Socialicons/linkedin.svg';
 import githubIcon from '../../assets/Socialicons/github.png';
 import twitterIcon from '../../assets/Socialicons/X.png';
 import instagramIcon from '../../assets/Socialicons/instagram.png';
-import leetcodeIcon from '../../assets/Socialicons/leetcode.png';
+// import leetcodeIcon from '../../assets/Socialicons/leetcode.png';
+import tufIcon from '../../assets/Socialicons/tuf.png';
 
 const Intro = () => {
   const greetings = [
@@ -82,18 +83,7 @@ const Intro = () => {
             {/* LinkedIn profile info will go here */}
           </div>
         </div>
-        
-        <div className="social-item">
-          <a href="https://github.com/NileshAmbekarr" target="_blank" rel="noopener noreferrer" className="social-link">
-            <div className="social-btn github">
-              <img src={githubIcon} alt="GitHub" />
-            </div>
-            <span className="social-name">GitHub</span>
-          </a>
-          <div className="social-hover-card">
-            {/* GitHub profile info will go here */}
-          </div>
-        </div>
+
         
         <div className="social-item">
           <a href="https://x.com/nileshambekar_" target="_blank" rel="noopener noreferrer" className="social-link">
@@ -108,6 +98,19 @@ const Intro = () => {
         </div>
         
         <div className="social-item">
+          <a href="https://github.com/NileshAmbekarr" target="_blank" rel="noopener noreferrer" className="social-link">
+            <div className="social-btn github">
+              <img src={githubIcon} alt="GitHub" />
+            </div>
+            <span className="social-name">GitHub</span>
+          </a>
+          <div className="social-hover-card">
+            {/* GitHub profile info will go here */}
+          </div>
+        </div>
+        
+        
+        <div className="social-item">
           <a href="https://www.instagram.com/niilesh_ambekar" target="_blank" rel="noopener noreferrer" className="social-link">
             <div className="social-btn instagram">
               <img src={instagramIcon} alt="Instagram" />
@@ -120,11 +123,11 @@ const Intro = () => {
         </div>
         
         <div className="social-item">
-          <a href="https://leetcode.com/u/nilesh_ambekar/" target="_blank" rel="noopener noreferrer" className="social-link">
-            <div className="social-btn leetcode">
-              <img width="32" height="32" src={leetcodeIcon} alt="leetcode"/>
+          <a href="https://takeuforward.org/plus/profile/nilesh_ambekar" target="_blank" rel="noopener noreferrer" className="social-link">
+            <div className="social-btn tuf">
+              <img width="32" height="32" src={tufIcon} alt="TakUForward logo"/>
             </div>
-            <span className="social-name">LeetCode</span>
+            <span className="social-name">TakeUForward</span>
           </a>
           <div className="social-hover-card">
             {/* LeetCode profile info will go here */}
