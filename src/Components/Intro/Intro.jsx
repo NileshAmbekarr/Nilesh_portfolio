@@ -136,7 +136,7 @@ const Intro = () => {
       </div>
       
       <div className="resume-container">
-        <a href="https://drive.google.com/file/d/1cYepXrnnY1ICnVaKMmuSeD8Tox-7MAcK/view" target="_blank" rel="noopener noreferrer" className="resume-button">
+        <a href="https://drive.google.com/file/d/1tFJZe6aXv8hPwgxTM7gsiUvspzPINhTb/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="resume-button">
           <span className="resume-text">View Resume</span>
         </a>
       </div>
