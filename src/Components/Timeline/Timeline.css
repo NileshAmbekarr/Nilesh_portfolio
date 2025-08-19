@@ -1,0 +1,299 @@
+/* Experience Timeline Styles */
+.experience-timeline {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .timeline-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .timeline-header h2 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    /* margin-bottom: 40px; */
+    text-align: center;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+  }
+  
+  .timeline-header p {
+    font-size: 1.1rem;
+    color: #718096;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .timeline-container {
+    position: relative;
+    padding: 2rem 0;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Desktop layout - alternating sides */
+  .timeline-item.left {
+    justify-content: flex-end;
+    padding-right: 3rem;
+  }
+  
+  .timeline-item.right {
+    justify-content: flex-start;
+    padding-left: 3rem;
+  }
+  
+  .experience-card {
+    background: transparent;
+    border-radius: 12px;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+    padding: 1.5rem;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #15155f;
+  }
+  
+  .experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 60px -15px rgba(0, 0, 255, 0.5);
+    backdrop-filter: blur(3px);
+  }
+
+  .experience-card .description {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin 0.4s ease;
+    margin: 0;
+  }
+  
+  /* Show description on hover */
+  .experience-card:hover .description {
+    max-height: 300px; /* adjust based on expected text length */
+    opacity: 1;
+    margin: 1rem 0 1.5rem; /* restores spacing when visible */
+  }
+  
+  
+  .card-header {
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .job-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+  }
+  
+  .company-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .company {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4299e1;
+  }
+  
+  .location {
+    font-size: 0.9rem;
+    color: #ffff99;
+  }
+  
+  .duration {
+    /* background: #edf2f7; */
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+    /* margin-bottom: 1.5rem; */
+  }
+  
+  .description {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tech-tag {
+    background: #667eea;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  /* Connector points for SVG lines */
+  .connector-point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #667eea;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .timeline-item.left .connector-point {
+    right: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .timeline-item.right .connector-point {
+    left: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Tablet styles */
+  @media (max-width: 768px) {
+    .experience-timeline {
+      padding: 1.5rem;
+    }
+  
+    .timeline-header h2 {
+      font-size: 2rem;
+    }
+  
+    .timeline-header p {
+      font-size: 1rem;
+    }
+  
+    .timeline-item {
+      margin-bottom: 2.5rem;
+    }
+  
+    /* Center all cards on tablet */
+    .timeline-item.left,
+    .timeline-item.right {
+      justify-content: center;
+      padding: 0;
+    }
+  
+    .experience-card {
+      max-width: 100%;
+      padding: 1.5rem;
+    }
+  
+    .job-title {
+      font-size: 1.3rem;
+    }
+  
+    .company {
+      font-size: 1rem;
+    }
+  
+    /* Center connector points on tablet */
+    .timeline-item.left .connector-point,
+    .timeline-item.right .connector-point {
+      left: 50%;
+      right: auto;
+      top: -0.75rem;
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 480px) {
+    .experience-timeline {
+      padding: 1rem;
+    }
+  
+    .timeline-header {
+      margin-bottom: 2rem;
+    }
+  
+    .timeline-header h2 {
+      font-size: 1.8rem;
+    }
+  
+    .timeline-container {
+      padding: 1rem 0;
+    }
+  
+    .timeline-item {
+      margin-bottom: 2rem;
+    }
+  
+    .experience-card {
+      padding: 1.25rem;
+      border-radius: 8px;
+    }
+  
+    .job-title {
+      font-size: 1.2rem;
+    }
+  
+    .company {
+      font-size: 0.95rem;
+    }
+  
+    .location {
+      font-size: 0.85rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  
+    .duration {
+      font-size: 0.85rem;
+      padding: 0.4rem 0.8rem;
+    }
+  
+    .tech-tag {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+    }
+  
+    .technologies {
+      gap: 0.4rem;
+    }
+  }
+  
+  /* Extra small mobile */
+  @media (max-width: 320px) {
+    .experience-timeline {
+      padding: 0.75rem;
+    }
+  
+    .experience-card {
+      padding: 1rem;
+    }
+  
+    .job-title {
+      font-size: 1.1rem;
+    }
+  
+    .timeline-header h2 {
+      font-size: 1.6rem;
+    }
+  }
+  

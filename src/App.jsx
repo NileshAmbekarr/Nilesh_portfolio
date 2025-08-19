@@ -20,7 +20,7 @@ function App() {
         <About />
         <Projects />
         <FloatingSkills />
-        {/* <Timeline/> */}
+        <Timeline/>
         <br />
         <p>abhi ke liye bas itna hi</p>
         <p>more content coming soon...😉</p>
