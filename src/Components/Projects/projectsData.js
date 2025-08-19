@@ -20,7 +20,7 @@ const projects = [
     techStack: ['node', 'Express', 'MongoDB', 'React', 'TailwindCSS'],
     image: DoctorSearch,
     githubLink: 'https://github.com/NileshAmbekarr/Doctor-Search',
-    liveDemo: 'https://doctorsearchportal.netlify.app/',
+    liveDemo: 'https://doctor-search-portal.netlify.app/',
   },
   {
     id: 3,
