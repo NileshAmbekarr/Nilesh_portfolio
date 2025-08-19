@@ -10,8 +10,8 @@ const Timeline = () => {
       company: "StudifySuccess",
       duration: "Mar 2025- Jun 2025",
       location: "Remote",
-      description: "Developed web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality software solutions.",
-      technologies: ["React", "Node.js", "MongoDB", "JavaScript"]
+      description: "Built scalable full-stack web apps with React/Next.js, real-time dashboards, and REST APIs, improving UI speed, load times, and data handling efficiency by 25–40%.",
+      technologies: ["React", "Node.js", "MongoDB", "JavaScript", "Next.js"]
     },
     {
       id: 2,
@@ -19,8 +19,8 @@ const Timeline = () => {
       company: "FOOZFOOD Global LLC",
       duration: "Feb 2025 - May 2025",
       location: "Remote",
-      description: "Built responsive user interfaces and improved website performance by 40%. Worked closely with designers to implement pixel-perfect designs.",
-      technologies: ["HTML", "CSS", "JavaScript", "Vue.js"]
+      description: "Led intern team, optimized workflows (GitHub, UAT, PR reviews), and delivered features like live notifications, farmer onboarding, and advanced user management for 1,000+ users.",
+      technologies: ["Node.js", "React", "MongoDB", "Agile Development"]
     },
     {
       id: 3,
@@ -28,8 +28,8 @@ const Timeline = () => {
       company: "Edunet Foundation",
       duration: "Dec 2024 - Jan 2025",
       location: "Remote",
-      description: "Created landing pages and e-commerce features. Gained experience in agile development methodologies and version control systems.",
-      technologies: ["React", "Tailwind CSS", "Git", "Firebase"]
+      description: "Worked on a Plant-Desease-Detection-System leveraging the power on Conventional Neural Netwroks",
+      technologies: ["Python", "CNNs", "Streamlit"]
     },
   ];
 
