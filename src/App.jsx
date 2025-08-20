@@ -24,8 +24,8 @@ function App() {
         <Timeline/>
         <ContactForm/> 
         <br />
-        <p>abhi ke liye bas itna hi</p>
-        <p>more content coming soon...😉</p>
+        <p>Built with ❤ by <a href="https://github.com/NileshAmbekarr">Nilesh Ambekar</a> | <a href="https://github.com/NileshAmbekarr/Nilesh_portfolio">`Source Code` </a></p>
+        {/* <p>Copyright 2025 </p> */}
   </div>
   )
 }
