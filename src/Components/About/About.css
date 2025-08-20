@@ -143,3 +143,21 @@
     padding: 3rem 1.5rem;
   }
 } 
+
+
+.tilted-strike {
+  position: relative;
+  display: inline-block; /* important for span */
+}
+
+.tilted-strike::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px; /* thickness */
+  background: #ffffff;
+  border-radius: 50% / 30%; /* makes the line slightly curved */
+  transform: rotate(-10deg); /* optional tilt */
+}
