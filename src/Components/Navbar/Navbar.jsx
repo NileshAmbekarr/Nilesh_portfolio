@@ -14,7 +14,7 @@ function Navbar() {
     return (
         <div className={`navbar ${navbarVisible ? 'visible' : ''}`}>
             <div className="navbar-left">
-                <div className="logo">Nilesh</div>
+                <a href="#intro"><div className="logo">Nilesh</div></a>
             </div>
             
             <div className="navbar-right">
@@ -23,7 +23,8 @@ function Navbar() {
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                 </ul>
-                <button className="contact-btn">Contact</button>
+                <a href="#contact"><button className="contact-btn" >Contact</button></a>
+                
                 <div className="notification-dot"></div>
             </div>
         </div>

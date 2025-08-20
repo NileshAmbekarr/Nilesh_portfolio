@@ -40,7 +40,7 @@ const Intro = () => {
   }, []);
 
   return (
-    <div className="intro-container">
+    <div className="intro-container" id='intro'>
       <div className="greeting-wrapper">
         <h2 className="greeting">{greetings[currentGreetingIndex].text}</h2>
         {/* <p className="greeting-language">{greetings[currentGreetingIndex].language}</p> */}

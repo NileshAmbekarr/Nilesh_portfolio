@@ -6,13 +6,14 @@ import Spotlight from './Components/Spotlight/Spotlight'
 import RippleCursor from './Components/Cursor/RippleCursor'
 import FloatingSkills from './Components/Skills/Skills'
 import Timeline from './Components/Timeline/Timeline'
+import ContactForm from './Components/ContactForm/ContactForm'
 import './App.css'
 
 function App() {
 
   return (
     <div style={{ position: 'relative' }}>
-        <div className="background-pattern"></div>
+        <div className="background-pattern"> </div>
         {/* <RippleCursor /> */}
         <Spotlight />
         <Navbar />
@@ -21,6 +22,7 @@ function App() {
         <Projects />
         <FloatingSkills />
         <Timeline/>
+        <ContactForm/> 
         <br />
         <p>abhi ke liye bas itna hi</p>
         <p>more content coming soon...😉</p>
