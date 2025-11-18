@@ -14,7 +14,7 @@ function App() {
   return (
     <div style={{ position: 'relative' }}>
         <div className="background-pattern"> </div>
-        {/* <RippleCursor /> */}
+        <RippleCursor />
         <Spotlight />
         <Navbar />
         <Intro />
