@@ -163,9 +163,14 @@
   object-fit: contain; /* ensures the image scales nicely */
 }
 
+.gif-image{
+  height: 100px;
+  width: auto;
+}
+
 .social-name {
   font-size: 0.8rem;
-  margin-top: 5px;
+  margin-top: 1px;
   color: #aaa;
 }
 

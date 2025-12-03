@@ -7,6 +7,7 @@ import RippleCursor from './Components/Cursor/RippleCursor'
 import FloatingSkills from './Components/Skills/Skills'
 import Timeline from './Components/Timeline/Timeline'
 import ContactForm from './Components/ContactForm/ContactForm'
+import NeonCursor from './Components/Cursor/NeonCursor'
 import './App.css'
 
 function App() {
@@ -14,8 +15,10 @@ function App() {
   return (
     <div style={{ position: 'relative' }}>
         <div className="background-pattern"> </div>
-        <RippleCursor />
-        <Spotlight />
+        {/* <RippleCursor /> */}
+        {/* <NeonCursor/> */}
+        <Spotlight />/
+       
         <Navbar />
         <Intro />
         <About />
@@ -23,6 +26,7 @@ function App() {
         <FloatingSkills />
         <Timeline/>
         <ContactForm/> 
+        
         <br />
         <p>Built with ❤ by <a href="https://github.com/NileshAmbekarr">Nilesh Ambekar</a> | <a href="https://github.com/NileshAmbekarr/Nilesh_portfolio">`Source Code` </a></p>
         {/* <p>Copyright 2025 </p> */}

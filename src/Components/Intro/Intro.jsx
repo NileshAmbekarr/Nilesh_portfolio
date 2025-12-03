@@ -68,7 +68,7 @@ const Intro = () => {
         />
         </div>
         <h1 className="name">Nilesh Ambekar</h1>
-        <p>:)</p>
+        {/* <p>:)</p> */}
       </div>
       
       <div className="social-links">

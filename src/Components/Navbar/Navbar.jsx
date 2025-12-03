@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import GIF from '../../assets/gifs/gif1.gif'
 
 function Navbar() {
     const [navbarVisible, setNavbarVisible] = useState(false);
@@ -14,7 +15,7 @@ function Navbar() {
     return (
         <div className={`navbar ${navbarVisible ? 'visible' : ''}`}>
             <div className="navbar-left">
-                <a href="#intro"><div className="logo">Nilesh</div></a>
+                <a href="#intro"><img src={GIF} alt=""height={40} /></a>
             </div>
             
             <div className="navbar-right">
