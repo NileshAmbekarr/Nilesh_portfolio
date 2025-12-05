@@ -88,6 +88,17 @@
   right: -20px;
 }
 
+.svg-stroke{
+  width: 50%;
+  height: auto;
+
+  position:relative;
+  z-index: -1;
+  right: -60%;
+  top: -60px;
+  transform: rotate(-15deg);
+}
+
 @keyframes gradientFlow {
   0% {
     background-position: 0% 50%;
@@ -104,7 +115,7 @@
 .social-links {
   display: flex;
   gap: 1.5rem;
-  margin-top: 1rem;
+  margin-top: -2rem;
   flex-wrap: wrap;
   justify-content: center;
 }

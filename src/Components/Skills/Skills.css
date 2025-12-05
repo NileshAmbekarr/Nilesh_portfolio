@@ -14,12 +14,16 @@
   
   .skills-title {
     color: white;
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 3rem;
+    font-weight: 600;
     margin-bottom: 40px;
     text-align: center;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     z-index: 10;
+    font-family: "optima-nova-lt-pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    /* text-decoration: underline; */
   }
   
   .skills-universe {

@@ -6,7 +6,7 @@ import githubIcon from '../../assets/Socialicons/github.png'
 const Projects = () => {
   return (
     <section className="projects-section" id="projects">
-      <h2 className="projects-title">Projects</h2>
+      <h2 className="projects-title">PROJECTS</h2>
       <div className="projects-list">
         {projects.map((project) => (
           <div className="project-card" key={project.id}>

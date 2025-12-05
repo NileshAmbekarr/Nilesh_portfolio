@@ -40,6 +40,7 @@ const Intro = () => {
   }, []);
 
   return (
+
     <div className="intro-container" id='intro'>
       <div className="greeting-wrapper">
         <h2 className="greeting">{greetings[currentGreetingIndex].text}</h2>
@@ -68,6 +69,25 @@ const Intro = () => {
         />
         </div>
         <h1 className="name">Nilesh Ambekar</h1>
+        <div className='svg-stroke'>
+          <AnimateSvg
+        width="100%"
+        height="100%"
+        viewBox="0 0 225 43"
+        className="my-svg-animation"
+        path="M222.462 12.8345C177.074 10.0328 132.077 4.80881 86.6062 3.64623C60.4691 2.97796 -17.6945 1.02174 8.17755 4.79475C50.7028 10.9964 94.6534 10.7971 137.47 14.9675C154.059 16.5834 170.516 18.7493 187.021 21.0384C193.373 21.9193 198.334 23.4078 188.17 22.8432C142.806 20.323 97.6784 14.7225 52.3141 12.0141C47.4732 11.7251 33.1304 11.5843 37.7934 12.9165C54.8856 17.8 73.2224 19.7239 90.7081 22.433C111.764 25.6952 133.161 27.7326 154.042 32.0315C161.542 33.5757 171.588 34.0575 178.571 37.1999C190.929 42.7607 151.511 39.3406 137.962 39.0868C115.414 38.6643 92.8916 37.3627 70.3626 36.4616"
+        strokeColor="#eff1e288"
+        strokeWidth={2}
+        strokeLinecap="round"
+        animationDuration={1.5}
+        animationDelay={0}
+        animationBounce={0.3}
+        reverseAnimation={false}
+        enableHoverAnimation={true}
+        hoverAnimationType="redraw"
+        hoverStrokeColor="#4f46e5"
+      />
+        </div>
         {/* <p>:)</p> */}
       </div>
       
