@@ -79,7 +79,7 @@ const Intro = () => {
         strokeColor="#eff1e288"
         strokeWidth={2}
         strokeLinecap="round"
-        animationDuration={1.5}
+        animationDuration={3.0}
         animationDelay={0}
         animationBounce={0.3}
         reverseAnimation={false}
@@ -100,7 +100,9 @@ const Intro = () => {
             <span className="social-name">LinkedIn</span>
           </a>
           <div className="social-hover-card">
-            {/* LinkedIn profile info will go here */}
+             <h1>500+ Connections here.</h1>
+             <p>Been posting my projects and stuff here.</p>
+             <p>You can drop me a DM here.</p>
           </div>
         </div>
 
@@ -113,7 +115,8 @@ const Intro = () => {
             <span className="social-name">Twitter</span>
           </a>
           <div className="social-hover-card">
-            {/* Twitter profile info will go here */}
+            <p>Not so active.</p>
+            <p>Slowly learning to use this</p>
           </div>
         </div>
         
@@ -125,7 +128,10 @@ const Intro = () => {
             <span className="social-name">GitHub</span>
           </a>
           <div className="social-hover-card">
-            {/* GitHub profile info will go here */}
+            <h1>My Favoriate Place</h1>
+            <h3>43+ repos</h3>
+            <br />
+            <p>checkout my projects here. (For an overview, head to <a href="#projects">projects</a> section</p>
           </div>
         </div>
         
@@ -138,7 +144,8 @@ const Intro = () => {
             <span className="social-name">Instagram</span>
           </a>
           <div className="social-hover-card">
-            {/* Instagram profile info will go here */}
+            <h2>Not so intresting profile</h2>
+            <p>Follow/DM here for chill conversation</p>
           </div>
         </div>
         
@@ -150,7 +157,8 @@ const Intro = () => {
             <span className="social-name">TakeUForward</span>
           </a>
           <div className="social-hover-card">
-            {/* LeetCode profile info will go here */}
+            <h1>250+ DSA problem solved</h1>
+            <p>Trying to maintain my daily streak here</p>
           </div>
         </div>
       </div>

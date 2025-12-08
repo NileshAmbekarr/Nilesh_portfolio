@@ -185,12 +185,12 @@
   color: #aaa;
 }
 
-/* .social-hover-card {
+.social-hover-card {
   position: absolute;
   top: -180px;
   left: 50%;
   transform: translateX(-50%) scale(0);
-  width: 200px;
+  width: 250px;
   background-color: rgba(30, 30, 30, 0.95);
   border: 1px solid white;
   border-radius: 8px;
@@ -199,12 +199,28 @@
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* row-gap: 5px; */
+}
+
+.social-hover-card h1{
+  font-size: medium;
+  margin: 2px;
+  color: #feb47b;
+}
+
+.social-hover-card p{
+  font-size: small;
+  margin: 2px;
+  color: #aaa;
 }
 
 .social-item:hover .social-hover-card {
   transform: translateX(-50%) scale(1);
   opacity: 1;
-} */
+}
 
 /* Resume button styles */
 .resume-container {
