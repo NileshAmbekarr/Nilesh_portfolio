@@ -13,7 +13,7 @@ import './App.css'
 function App() {
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative'}}>
         <div className="background-pattern"> </div>
         {/* <RippleCursor /> */}
         {/* <NeonCursor/> */}
