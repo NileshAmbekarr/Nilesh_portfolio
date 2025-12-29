@@ -1,16 +1,17 @@
 .intro-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   min-height: 40vh;
-  padding: 6rem;
+  padding: 2rem;
   text-align: center;
 }
 
 /* Greeting styles with language rotation */
 .greeting-wrapper {
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   height: 70px;
   display: flex;
   flex-direction: column;
@@ -20,6 +21,7 @@
 
 .greeting {
   font-size: 2.5rem;
+  font-weight: 600;
   margin: 0;
   opacity: 1;
   animation: fadeIn 1s ease-in-out;
@@ -46,24 +48,25 @@
 /* Name section styles */
 .name-container {
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .pre-name {
-  font-size: 1.5rem;
-  margin: 0 0 0.5rem 0;
-  color: #ccc;
-  font-family: 'Kristi', cursive;
+  font-size: 3rem;
+  margin-bottom: 0;
+  color: #787777;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   letter-spacing: 1px;
+  display: inline;
 }
 
 .name {
-  font-size: 6rem;
-  font-weight: 800;
+  font-size: 6.5rem;
+  font-weight: 900;
   margin: 0;
-  background: linear-gradient(
-    to right,
-    #ff7e5f, #feb47b, #ffcf96, #88d3ce, #6e45e2, #d53369
-  );
+  background: white;
   background-size: 300% 300%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -73,20 +76,6 @@
   letter-spacing: 2px;
 }
 
-.svg-container{
-  width: 20%;
-  height: auto;
-  display: center;
-  justify-content: center;
-  align-items: center;
-  justify-self: center;
-  /* border: solid 2px red; */
-  margin: 0, auto;
-  z-index: 2;
-  position: relative;
-  top: -30px;
-  right: -20px;
-}
 
 .svg-stroke{
   width: 50%;
@@ -99,25 +88,15 @@
   transform: rotate(-15deg);
 }
 
-@keyframes gradientFlow {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 /* Social links styles */
 .social-links {
   display: flex;
-  gap: 1.5rem;
-  margin-top: -2rem;
+  gap: 2rem;
+  margin-top: 0;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: flex-start;
 }
 
 .social-item {
@@ -125,7 +104,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin: 0 10px;
+  margin: 0 0px;
 }
 
 .social-link {
@@ -156,6 +135,7 @@
 .social-btn img {
   max-width: 100%;
   max-height: 70%;
+  opacity: 70%;
 }
 
 .social-btn.tuf {
