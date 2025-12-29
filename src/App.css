@@ -12,12 +12,17 @@
   right: 0;
   bottom: 0;
   z-index: -1;
+ 
+  background-color: #010101;
+  /* background-image: radial-gradient(#ffffff33 1px, #020209 1px); */
+  background-image:
+  linear-gradient(to right, #4f4f4f2e 1px, transparent 1px),
+  linear-gradient(to bottom, #4f4f4f2e 1px, transparent 1px);
 
-  background-image: radial-gradient(#ffffff33 1px, #020209 1px);
   background-size: 27px 27px;
 
-  mask-image: radial-gradient(ellipse 55% 80% at 50% 0%, #000 70%, transparent 120%);
-  -webkit-mask-image: radial-gradient(ellipse 55% 80% at 50% 0%, #000 70%, transparent 120%);
+  /* mask-image: radial-gradient(ellipse 55% 80% at 50% 0%, #000 70%, transparent 120%); */
+  /* -webkit-mask-image: radial-gradient(ellipse 55% 80% at 50% 0%, #000 70%, transparent 120%); */
 }
 
 /* .floating-particle {

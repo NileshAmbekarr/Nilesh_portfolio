@@ -15,7 +15,7 @@ function Navbar() {
     return (
         <div className={`navbar ${navbarVisible ? 'visible' : ''}`}>
             <div className="navbar-left">
-                <a href="#intro"><img src={GIF} alt=""height={40} /></a>
+                <a href="#intro"><img src={GIF} alt="" className='h-12' /></a>
             </div>
             
             <div className="navbar-right">

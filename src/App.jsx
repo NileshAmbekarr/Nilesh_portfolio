@@ -3,20 +3,18 @@ import Intro from './Components/Intro/Intro'
 import About from './Components/About/About'
 import Projects from './Components/Projects/Projects'
 import Spotlight from './Components/Spotlight/Spotlight'
-import RippleCursor from './Components/Cursor/RippleCursor'
 import FloatingSkills from './Components/Skills/Skills'
 import Timeline from './Components/Timeline/Timeline'
 import ContactForm from './Components/ContactForm/ContactForm'
-import NeonCursor from './Components/Cursor/NeonCursor'
+import Stars from './Components/Intro/Stars'
 import './App.css'
 
 function App() {
 
   return (
-    <div style={{ position: 'relative' }}>
-        <div className="background-pattern"> </div>
-        {/* <RippleCursor /> */}
-        {/* <NeonCursor/> */}
+    <div style={{ position: 'relative'}}>
+        <div className="background-pattern">   <Stars/> </div>
+        
         <Spotlight />/
        
         <Navbar />

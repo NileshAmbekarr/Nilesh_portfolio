@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './Intro.css';
-import { AnimateSvg } from '../SVGline/svg';
 // Import social icons directly
 import linkedinIcon from '../../assets/Socialicons/linkedin.svg';
 import githubIcon from '../../assets/Socialicons/github.png';
 import twitterIcon from '../../assets/Socialicons/X.png';
 import instagramIcon from '../../assets/Socialicons/instagram.png';
-// import leetcodeIcon from '../../assets/Socialicons/leetcode.png';
 import tufIcon from '../../assets/Socialicons/tuf.png';
+import { NoiseBackground } from '../ui/noise-background';
+import { FlipWords } from '../ui/flip-words';
+import Stars from './Stars';
 
 const Intro = () => {
   const greetings = [
@@ -39,8 +40,8 @@ const Intro = () => {
     };
   }, []);
 
+  const words = ["Web Apps", "Websites", "Jokes" ];
   return (
-
     <div className="intro-container" id='intro'>
       <div className="greeting-wrapper">
         <h2 className="greeting">{greetings[currentGreetingIndex].text}</h2>
@@ -49,27 +50,12 @@ const Intro = () => {
       
       <div className="name-container">
         <p className="pre-name">I am</p>
-        <div className="svg-container"> 
-        <AnimateSvg
-          width="100%"
-          height="100%"
-          viewBox="0 0 254 107"
-          className="my-svg-animation"
-          path="M3 103.824C45.3292 106.086 85.2951 90.8282 118.182 63.953C129.508 54.6969 140.763 42.4172 147.387 29.1688C150.391 23.1616 154.398 11.338 149.274 5.78786C140.768 -3.42746 129.585 13.6307 125.893 19.9805C119.22 31.4586 124.234 53.8078 136.148 60.2613C158.264 72.2407 191.043 69.3799 215.315 68.3011C225.006 67.8703 234.869 65.4297 244.439 65.4297C248.152 65.4297 239.179 60.7699 237.794 59.5229C229.618 52.165 229.186 52.3018 239.27 58.7846C240.667 59.6823 250.92 65.2052 250.92 66.168C250.92 66.84 233.48 79.6822 231.887 81.6733"
-          strokeColor="#ffffff"
-          strokeWidth={3}
-          strokeLinecap="round"
-          animationDuration={1.5}
-          animationDelay={0}
-          animationBounce={0.3}
-          reverseAnimation={true}
-          enableHoverAnimation={true}
-          hoverAnimationType="redraw"
-          hoverStrokeColor="#4f46e5"
-        />
-        </div>
         <h1 className="name">Nilesh Ambekar</h1>
-        <div className='svg-stroke'>
+        <div className="text-5xl font-bold inline text-neutral-900 dark:text-neutral-400">
+             <span className='font-normal'>I make</span>
+            <FlipWords words={words} /> <br />
+        </div>
+        {/* <div className='svg-stroke'>
           <AnimateSvg
         width="100%"
         height="100%"
@@ -79,7 +65,7 @@ const Intro = () => {
         strokeColor="#eff1e288"
         strokeWidth={2}
         strokeLinecap="round"
-        animationDuration={1.5}
+        animationDuration={3.0}
         animationDelay={0}
         animationBounce={0.3}
         reverseAnimation={false}
@@ -87,7 +73,7 @@ const Intro = () => {
         hoverAnimationType="redraw"
         hoverStrokeColor="#4f46e5"
       />
-        </div>
+        </div> */}
         {/* <p>:)</p> */}
       </div>
       
@@ -100,7 +86,9 @@ const Intro = () => {
             <span className="social-name">LinkedIn</span>
           </a>
           <div className="social-hover-card">
-            {/* LinkedIn profile info will go here */}
+             <h1>500+ Connections here.</h1>
+             <p>Been posting my projects and stuff here.</p>
+             <p>You can drop me a DM here.</p>
           </div>
         </div>
 
@@ -113,7 +101,8 @@ const Intro = () => {
             <span className="social-name">Twitter</span>
           </a>
           <div className="social-hover-card">
-            {/* Twitter profile info will go here */}
+            <p>Not so active.</p>
+            <p>Slowly learning to use this</p>
           </div>
         </div>
         
@@ -125,7 +114,10 @@ const Intro = () => {
             <span className="social-name">GitHub</span>
           </a>
           <div className="social-hover-card">
-            {/* GitHub profile info will go here */}
+            <h1>My Favoriate Place</h1>
+            <h3>43+ repos</h3>
+            <br />
+            <p>checkout my projects here. (For an overview, head to <a href="#projects">projects</a> section</p>
           </div>
         </div>
         
@@ -138,7 +130,8 @@ const Intro = () => {
             <span className="social-name">Instagram</span>
           </a>
           <div className="social-hover-card">
-            {/* Instagram profile info will go here */}
+            <h2>Not so intresting profile</h2>
+            <p>Follow/DM here for chill conversation</p>
           </div>
         </div>
         
@@ -150,15 +143,26 @@ const Intro = () => {
             <span className="social-name">TakeUForward</span>
           </a>
           <div className="social-hover-card">
-            {/* LeetCode profile info will go here */}
+            <h1>250+ DSA problem solved</h1>
+            <p>Trying to maintain my daily streak here</p>
           </div>
         </div>
       </div>
-      
-      <div className="resume-container">
-        <a href="https://drive.google.com/file/d/17ysxDf5hIeocItrM01e85GsLi92p679U/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="resume-button">
-          <span className="resume-text">View Resume</span>
-        </a>
+      <div className="flex justify-center">
+        <NoiseBackground
+          containerClassName="w-fit my-8 p-2 rounded-full mx-auto"
+          gradientColors={[
+            "rgb(255, 100, 150)",
+            "rgb(100, 150, 255)",
+            "rgb(255, 200, 100)",
+          ]}
+        >
+          <button className="h-full w-full cursor-pointer rounded-full bg-linear-to-r from-neutral-100 via-neutral-100 to-white px-4 py-2 text-black shadow-[0px_2px_0px_0px_var(--color-neutral-50)_inset,0px_0.5px_1px_0px_var(--color-neutral-400)] transition-all duration-100 active:scale-98 dark:from-black dark:via-black dark:to-neutral-900 dark:text-white dark:shadow-[0px_1px_0px_0px_var(--color-neutral-950)_inset,0px_1px_0px_0px_var(--color-neutral-800)]">
+            <a href="https://drive.google.com/file/d/1jS4vO-yxetnGmfjZ94dGN0LAVBKKWxhg/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+              <span className="resume-text">View Resume &rarr;</span>
+            </a>
+          </button>
+        </NoiseBackground>
       </div>
     </div>
   );
