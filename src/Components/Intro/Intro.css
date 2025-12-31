@@ -11,7 +11,7 @@
 /* Greeting styles with language rotation */
 .greeting-wrapper {
   margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   height: 70px;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 }
 
 .greeting {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin: 0;
   opacity: 1;
@@ -69,9 +69,9 @@
   background: white;
   background-size: 300% 300%;
   background-clip: text;
+  text-align: left;
   -webkit-background-clip: text;
   color: transparent;
-  animation: gradientFlow 20s ease infinite;
   font-family: 'Gloria Hallelujah', cursive;
   letter-spacing: 2px;
 }
