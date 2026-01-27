@@ -33,12 +33,12 @@
 }
 
 .project-card {
-  background: transparent;
+  background: black;
   border-radius: 1.5rem;
   box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.15);
   overflow: hidden;
   width: 320px;
-  max-height: 500px;
+  max-height: 550px;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -46,7 +46,7 @@
 }
 
 .project-card:hover {
-  transform: translateY(-8px) scale(1.10);
+  transform: translateY(-8px) scale(1.05);
   box-shadow: 0 0 60px -15px rgba(0, 0, 255, 0.5);
 }
 
@@ -76,13 +76,13 @@
 
 .project-desc {
   color: #e0e0e0;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
   min-height: 48px;
 }
 
 .project-tech {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .tech-pill {
@@ -100,20 +100,18 @@
 }
 
 .project-links {
-  margin-top: auto;
   display: flex;
   gap: 1rem;
 }
 
 .project-btn {
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
-  border: none;
   outline: none;
   cursor: pointer;
   background: transparent;
@@ -121,12 +119,13 @@
 }
 
 .project-btn.github {
-  background: transparent;
+  background: black;
+  display: flex;
 }
 
 .project-btn.live {
-  background: transparent;
-  color:#fff;
+  background: black;
+  display: flex;
 }
 
 .project-btn:hover {
@@ -137,20 +136,19 @@
 .view-more-container {
   display: flex;
   justify-content: center;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 
 .view-more-btn {
-  padding: 0.8rem 2.2rem;
+  display: flex;
+  gap: 5px;
+  padding: 1rem 2.2rem;
   border-radius: 999px;
   font-size: 1.1rem;
   font-weight: 700;
-  background: transparent;
+  background: black;
   color: #fff;
   text-decoration: none;
-  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.18);
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  border: none;
   outline: none;
 }
 
