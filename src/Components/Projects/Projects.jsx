@@ -1,5 +1,4 @@
 
-import { StickyScroll } from '../ui/sticky-scroll-reveal'
 import './Projects.css';
 import projects from './projectsData';
 import githubIcon from '../../assets/Socialicons/github.png'
