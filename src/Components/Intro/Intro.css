@@ -1,13 +1,32 @@
 .intro-container {
   display: flex;
-  flex-direction: column;
   align-items: start;
   justify-content: center;
   min-height: 40vh;
   padding: 2rem;
   text-align: center;
+  position: relative;
+  /* border: 1px dotted green; */
 }
 
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  position: sticky;
+  /* border: 1px dotted yellow; */
+}
+
+.image-container{
+  height: 100%;
+  width: 40%;
+  /* border: 1px dotted red; */
+  position:absolute;
+  z-index: -1;
+  right: 1%;
+  top: 6rem;
+}
 /* Greeting styles with language rotation */
 .greeting-wrapper {
   margin-top: 1rem;
@@ -51,21 +70,26 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+  z-index: 1;
+  /* border: 1px dotted green; */
 }
 
 .pre-name {
   font-size: 3rem;
   margin-bottom: 0;
   color: #787777;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Gloria Hallelujah', cursive;
   letter-spacing: 1px;
   display: inline;
+  position:relative;
+  bottom: -30px;
 }
 
 .name {
   font-size: 6.5rem;
   font-weight: 900;
   margin: 0;
+  display: inline;
   background: white;
   background-size: 300% 300%;
   background-clip: text;
@@ -259,6 +283,11 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .intro-container{
+    flex-direction: column;
+  }
+
+  .
   .greeting {
     font-size: 2.5rem;
   }
