@@ -8,26 +8,31 @@ import instagramIcon from '../../assets/Socialicons/instagram.png';
 import tufIcon from '../../assets/Socialicons/tuf.png';
 import { NoiseBackground } from '../ui/noise-background';
 import { FlipWords } from '../ui/flip-words';
-import Stars from './Stars';
+import {PixelatedCanvas} from '../ui/pixelated-canvas'
+import Photo from './Photo.jpeg';
 
 const Intro = () => {
   const greetings = [
-    { text: "Hello", language: "English" },
-    { text: "नमस्कार", language: "Marathi" },
-    { text: "नमस्ते", language: "Hindi" },
-    { text: "வணக்கம்", language: "Tamil" },
-    { text: "Bonjour", language: "French" },
-    { text: "Привет", language: "Russian" },
-    { text: "Hola", language: "Spanish" },
-    { text: "こんにちは", language: "Japanese" }
+    { text: "Hello", language: "English" },        // global default
+    { text: "नमस्कार", language: "Marathi" },     // must-have
+    { text: "नमस्ते", language: "Hindi" },        // pan-India
+    { text: "வணக்கம்", language: "Tamil" },      // major Dravidian
+    { text: "নমস্কার", language: "Bengali" },    // eastern India
+    { text: "ਸਤ ਸ੍ਰੀ ਅਕਾਲ", language: "Punjabi" },// north India
+    { text: "こんにちは", language: "Japanese" }, // clean, aesthetic
+    { text: "Bonjour", language: "French" },      // classic global
+    { text: "Hola", language: "Spanish" },        // widely recognized
+    { text: "Привет", language: "Russian" },      // non-Latin visual contrast
+    { text: "안녕하세요", language: "Korean" }     // modern / tech vibe
   ];
+
 
   const [currentGreetingIndex, setCurrentGreetingIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentGreetingIndex((prevIndex) => (prevIndex + 1) % greetings.length);
-    }, 2000);
+    }, 1500);
 
     // Import Google Fonts
     const link = document.createElement('link');
@@ -40,10 +45,11 @@ const Intro = () => {
     };
   }, []);
 
-  const words = ["Web Apps", "Websites", "Jokes" ];
+  const words = ["Web Apps", "Websites", "Jokes", "Apps", "very good Chai"];
   return (
     <div className="intro-container" id='intro'>
-      <div className="greeting-wrapper">
+      <div className='container'>
+          <div className="greeting-wrapper">
         <h2 className="greeting">{greetings[currentGreetingIndex].text}</h2>
         {/* <p className="greeting-language">{greetings[currentGreetingIndex].language}</p> */}
       </div>
@@ -164,6 +170,30 @@ const Intro = () => {
           </button>
         </NoiseBackground>
       </div>
+      </div>
+
+       <div className="static lg:absolute lg:right-0 z-2 bottom-0  mx-auto mt-8 flex items-center justify-center opacity-50">
+        <PixelatedCanvas
+          src={Photo}
+          width={400}
+          height={700}
+          cellSize={4}
+          dotScale={0.9}
+          shape="square"
+          backgroundColor="#000000"
+          dropoutStrength={0.1}
+          interactive
+          distortionStrength={0.1}
+          distortionRadius={150}
+          distortionMode="repel"
+          followSpeed={0.2}
+          jitterStrength={4}
+          jitterSpeed={1}
+          sampleAverage
+          className="rounded-xl shadow-lg w-md"
+        />
+      </div>
+      
     </div>
   );
 };

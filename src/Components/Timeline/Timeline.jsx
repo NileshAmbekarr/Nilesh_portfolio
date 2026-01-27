@@ -5,22 +5,31 @@ import './Timeline.css';
 const Timeline = () => {
   const experiences = [
     {
-      id: 1,
-      title: "Full Stack Developer Intern",
-      company: "StudifySuccess",
-      duration: "Mar 2025- Jun 2025",
-      location: "Remote",
-      description: "Built scalable full-stack web apps with React/Next.js, real-time dashboards, and REST APIs, improving UI speed, load times, and data handling efficiency by 25–40%.",
-      technologies: ["React", "Node.js", "MongoDB", "JavaScript", "Next.js"]
+      "id": 3,
+      "title": "Freelance Software Engineer",
+      "company": "Abhaya IT Solutions",
+      "duration": "Dec 2025 - Jan 2026",
+      "location": "Remote",
+      "description": "Delivered a production-ready website with SEO, deployment, and an AI chat assistant—basically wore every hat and shipped anyway.",
+      "technologies": ["Next.js", "React", "Node.js", "Google Gemini API", "SEO"]
+    },
+      {
+      "id": 1,
+      "title": "Software Engineer Intern",
+      "company": "StudifySuccess",
+      "duration": "Mar 2025 - Jun 2025",
+      "location": "Remote",
+      "description": "Built backend APIs, a notification broadcasting system, and admin workflows that made user management boringly reliable (which is exactly the goal).",
+      "technologies": ["Node.js", "Express", "MongoDB", "JavaScript", "REST APIs"]
     },
     {
-      id: 2,
-      title: "FullStack Developer Intern",
-      company: "FOOZFOOD Global LLC",
-      duration: "Feb 2025 - May 2025",
-      location: "Remote",
-      description: "Led intern team, optimized workflows (GitHub, UAT, PR reviews), and delivered features like live notifications, farmer onboarding, and advanced user management for 1,000+ users.",
-      technologies: ["Node.js", "React", "MongoDB", "Agile Development"]
+      "id": 2,
+      "title": "Software Development Intern",
+      "company": "FOOZ Global LLP",
+      "duration": "Feb 2025 - Jul 2025",
+      "location": "Remote",
+      "description": "Owned backend architecture for a logistics system, handled complex order lifecycles, and reviewed enough PRs to develop trust issues with bad APIs.",
+      "technologies": ["Node.js", "Express", "MongoDB", "JWT", "Git"]
     },
     {
       id: 3,
@@ -34,7 +43,7 @@ const Timeline = () => {
   ];
 
   return (
-    <div className="experience-timeline">
+    <div className="experience-timeline" id='timeline'>
       <div className="timeline-header">
         <h2>Experience & Internships</h2>
         <p>My professional journey and learning experiences</p>
