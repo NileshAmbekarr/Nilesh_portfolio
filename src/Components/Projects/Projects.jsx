@@ -1,7 +1,9 @@
-import React from 'react';
+
+import { StickyScroll } from '../ui/sticky-scroll-reveal'
 import './Projects.css';
 import projects from './projectsData';
 import githubIcon from '../../assets/Socialicons/github.png'
+import { NoiseBackground } from '../ui/noise-background';
 
 const Projects = () => {
   return (
@@ -20,7 +22,13 @@ const Projects = () => {
                 ))}
               </div>
               <div className="project-links">
-
+                <NoiseBackground
+                  containerClassName="w-fit my-8 p-2 rounded-full mx-auto"
+                  gradientColors={[
+                    "rgb(255, 100, 150)",
+                    "rgb(100, 150, 255)",
+                    "rgb(255, 200, 100)",
+                  ]}>
                 <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="project-btn github"> 
                       <img src={githubIcon} alt="" style={{
                         height: '20px',
@@ -28,8 +36,19 @@ const Projects = () => {
                         marginRight: '10px',
                         // marginTop: '5px',
                     }} /> GitHub</a>
+                  </NoiseBackground>
+
+                  
                 {project.liveDemo && (
-                  <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="project-btn live">Live Demo</a>
+                  <NoiseBackground
+                   containerClassName="w-fit my-8 p-2 rounded-full mx-auto"
+                  gradientColors={[
+                    "rgb(255, 100, 150)",
+                    "rgb(100, 150, 255)",
+                    "rgb(255, 200, 100)",
+                  ]}>
+                    <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="project-btn live">Live Demo</a>
+                  </NoiseBackground>
                 )}
               </div>
             </div>
@@ -37,15 +56,24 @@ const Projects = () => {
         ))}
       </div>
       <div className="view-more-container">
-        <a href="https://github.com/NileshAmbekarr?tab=repositories" target="_blank" rel="noopener noreferrer" className="view-more-btn">
-        <img src={githubIcon} alt="" style={{
-                        height: '20px',
-                        width: '20px',
-                        marginRight: '10px',
-                        // marginTop: '5px',
-                        // paddingTop: '5px',
-                    }} /> View more on GitHub</a>
-      </div>
+        <NoiseBackground
+           containerClassName="w-fit my-8 p-2 rounded-full mx-auto"
+          gradientColors={[
+            "rgb(255, 100, 150)",
+            "rgb(100, 150, 255)",
+            "rgb(255, 200, 100)",
+          ]}>
+            <a href="https://github.com/NileshAmbekarr?tab=repositories" target="_blank" rel="noopener noreferrer" className="view-more-btn">
+          <img src={githubIcon} alt="" style={{
+                          height: '20px',
+                          width: '20px',
+                          marginRight: '10px',
+                          // marginTop: '5px',
+                          // paddingTop: '5px',
+                      }} /> View more on GitHub</a>
+          
+          </NoiseBackground>
+       </div>
     </section>
   );
 };
