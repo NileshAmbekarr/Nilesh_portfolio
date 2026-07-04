@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import './Intro.css';
 // Import social icons directly
 import linkedinIcon from '../../assets/Socialicons/linkedin.svg';
@@ -9,7 +10,31 @@ import tufIcon from '../../assets/Socialicons/tuf.png';
 import { NoiseBackground } from '../ui/noise-background';
 import { FlipWords } from '../ui/flip-words';
 import {PixelatedCanvas} from '../ui/pixelated-canvas'
-import Photo from './Photo.jpeg';
+import Photo1 from './Photo1.png';
+import Photo2 from './Photo2.png';
+import Photo3 from './Photo3.png';
+import Photo4 from './Photo4.jpeg';
+// Placeholder generator — swap these entries with real photo imports,
+// e.g. `import Photo2 from './Photo2.jpeg'` and add Photo2 to INTRO_PHOTOS.
+const placeholderPhoto = (label, from, to) =>
+  `data:image/svg+xml;utf8,${encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="700" viewBox="0 0 400 700">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="${from}"/><stop offset="100%" stop-color="${to}"/>
+      </linearGradient></defs>
+      <rect width="400" height="700" fill="url(#g)"/>
+      <text x="200" y="350" text-anchor="middle" font-family="monospace" font-size="24" fill="rgba(255,255,255,0.85)">${label}</text>
+      <text x="200" y="385" text-anchor="middle" font-family="monospace" font-size="14" fill="rgba(255,255,255,0.55)">replace in Intro.jsx</text>
+    </svg>`
+  )}`;
+
+const INTRO_PHOTOS = [
+  Photo1, Photo2,
+  Photo3, Photo4
+];
+
+// How long each photo stays on screen (ms)
+const PHOTO_ROTATE_INTERVAL = 4000;
 
 const Intro = () => {
   const greetings = [
@@ -28,6 +53,17 @@ const Intro = () => {
 
 
   const [currentGreetingIndex, setCurrentGreetingIndex] = useState(0);
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+
+  useEffect(() => {
+    if (INTRO_PHOTOS.length < 2) return;
+    // preload so the incoming canvas can draw instantly during the crossfade
+    INTRO_PHOTOS.forEach((src) => { const img = new Image(); img.src = src; });
+    const photoInterval = setInterval(() => {
+      setCurrentPhotoIndex((prev) => (prev + 1) % INTRO_PHOTOS.length);
+    }, PHOTO_ROTATE_INTERVAL);
+    return () => clearInterval(photoInterval);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -173,11 +209,21 @@ const Intro = () => {
       </div>
 
        <div className="static lg:absolute lg:right-0 z-2 bottom-0  mx-auto mt-8 flex items-center justify-center opacity-50">
+        <div className="intro-photo-stack">
+        <AnimatePresence initial={false}>
+        <motion.div
+          key={currentPhotoIndex}
+          className="intro-photo-layer"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2, ease: 'ease' }}
+        >
         <PixelatedCanvas
-          src={Photo}
-          width={400}
+          src={INTRO_PHOTOS[currentPhotoIndex]}
+          width={500}
           height={700}
-          cellSize={4}
+          cellSize={3}
           dotScale={0.9}
           shape="square"
           backgroundColor="#000000"
@@ -192,6 +238,9 @@ const Intro = () => {
           sampleAverage
           className="rounded-xl shadow-lg w-md"
         />
+        </motion.div>
+        </AnimatePresence>
+        </div>
       </div>
       
     </div>

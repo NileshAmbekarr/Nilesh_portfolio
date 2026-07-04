@@ -32,7 +32,7 @@ const Timeline = () => {
       "technologies": ["Node.js", "Express", "MongoDB", "JWT", "Git"]
     },
     {
-      id: 3,
+      id: 4,
       title: "AI Intern",
       company: "Edunet Foundation",
       duration: "Dec 2024 - Jan 2025",

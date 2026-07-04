@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
+
+/* ══ Page ══ */
+
+.gallery-page {
+  position: relative;
+  /* break out of #root's max-width + padding to go full-bleed */
+  width: 100vw;
+  margin: -2rem calc(50% - 50vw);
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 85% -5%, rgba(233, 200, 170, 0.35), transparent 60%),
+    radial-gradient(1000px 700px at -10% 40%, rgba(200, 214, 185, 0.3), transparent 55%),
+    radial-gradient(900px 600px at 95% 95%, rgba(226, 200, 220, 0.25), transparent 60%),
+    #faf6ef;
+  overflow-x: clip;
+}
+
+/* Subtle repeating minimal-flower pattern over the whole page */
+.g-flowers {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='280' viewBox='0 0 280 280'%3E%3Cg fill='none' stroke='%23b89a6d' stroke-opacity='0.28' stroke-width='1.1'%3E%3Cg transform='translate(52 64)'%3E%3Ccircle r='3.2'/%3E%3Ccircle cx='0' cy='-9' r='4'/%3E%3Ccircle cx='8.6' cy='-2.8' r='4'/%3E%3Ccircle cx='5.3' cy='7.3' r='4'/%3E%3Ccircle cx='-5.3' cy='7.3' r='4'/%3E%3Ccircle cx='-8.6' cy='-2.8' r='4'/%3E%3Cpath d='M0 12 q -2 14 -6 22'/%3E%3C/g%3E%3Cg transform='translate(198 172) scale(0.8)'%3E%3Ccircle r='3.2'/%3E%3Ccircle cx='0' cy='-9' r='4'/%3E%3Ccircle cx='8.6' cy='-2.8' r='4'/%3E%3Ccircle cx='5.3' cy='7.3' r='4'/%3E%3Ccircle cx='-5.3' cy='7.3' r='4'/%3E%3Ccircle cx='-8.6' cy='-2.8' r='4'/%3E%3Cpath d='M0 12 q 3 14 7 20'/%3E%3C/g%3E%3Cg transform='translate(120 240) scale(0.6)'%3E%3Ccircle r='3.2'/%3E%3Ccircle cx='0' cy='-9' r='4'/%3E%3Ccircle cx='8.6' cy='-2.8' r='4'/%3E%3Ccircle cx='5.3' cy='7.3' r='4'/%3E%3Ccircle cx='-5.3' cy='7.3' r='4'/%3E%3Ccircle cx='-8.6' cy='-2.8' r='4'/%3E%3C/g%3E%3Ccircle cx='240' cy='48' r='1.4' fill='%23b89a6d' fill-opacity='0.2' stroke='none'/%3E%3Ccircle cx='24' cy='196' r='1.4' fill='%23b89a6d' fill-opacity='0.2' stroke='none'/%3E%3Ccircle cx='160' cy='110' r='1.2' fill='%23b89a6d' fill-opacity='0.16' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 280px 280px;
+}
+
+/* ══ Scroll hint ══ */
+
+.g-hint {
+  position: absolute;
+  top: calc(100dvh - 72px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Caveat', cursive;
+  font-size: 1.35rem;
+  color: #a68f70;
+  margin: 0;
+  animation: gHintBob 2.2s ease-in-out infinite;
+}
+
+@keyframes gHintBob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(7px); }
+}
+
+/* ══ Sticky pile ══ */
+
+/* Each slot pins to the viewport; the next photo slides up and lands on top */
+.g-slot {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.g-polaroid-wrap {
+  position: relative;
+  will-change: transform;
+}
+
+/* ══ Polaroid ══ */
+
+.g-polaroid {
+  background: #fffefb;
+  padding: clamp(10px, 1.6vw, 16px);
+  padding-bottom: clamp(38px, 5vw, 58px);
+  border-radius: 2px;
+  box-shadow:
+    0 24px 55px rgba(88, 66, 42, 0.3),
+    0 5px 14px rgba(88, 66, 42, 0.14),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+.g-polaroid img {
+  display: block;
+  width: min(520px, 66vw);
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  user-select: none;
+  filter: saturate(0.96) contrast(0.98);
+}
+
+/* ══ Handwritten note ══ */
+
+.g-note {
+  position: absolute;
+  top: 50%;
+  width: 190px;
+  padding: 20px 18px 22px;
+  margin: 0;
+  font-family: 'Caveat', cursive;
+  font-size: 1.35rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #59493a;
+  text-align: center;
+  background: #fffdf4;
+  box-shadow: 0 10px 26px rgba(88, 66, 42, 0.2);
+  border-radius: 2px;
+}
+
+.g-note--right {
+  left: calc(100% + 30px);
+  transform: translateY(-50%) rotate(3.5deg);
+}
+
+.g-note--left {
+  right: calc(100% + 30px);
+  transform: translateY(-50%) rotate(-3.5deg);
+}
+
+/* washi-tape holding the note */
+.g-note-tape {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 74px;
+  height: 24px;
+  background: rgba(233, 214, 168, 0.65);
+  box-shadow: 0 1px 3px rgba(88, 66, 42, 0.12);
+}
+
+/* ══ End mark ══ */
+
+.g-fin {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 18vh 0 10vh;
+  margin: 0;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  color: #b3a184;
+}
+
+/* ══ Responsive ══ */
+
+@media (max-width: 860px) {
+  .g-polaroid img { width: min(440px, 74vw); }
+
+  /* note moves under the photo */
+  .g-note {
+    position: static;
+    display: block;
+    width: max-content;
+    max-width: 240px;
+    margin: 18px auto 0;
+    font-size: 1.2rem;
+    padding: 16px 16px 18px;
+  }
+  .g-note--right { transform: rotate(2.5deg); }
+  .g-note--left { transform: rotate(-2.5deg); }
+}

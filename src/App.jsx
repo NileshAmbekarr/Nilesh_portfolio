@@ -14,8 +14,8 @@ function App() {
   return (
     <div style={{ position: 'relative'}}>
         <div className="background-pattern">   <Stars/> </div>
-        
-        <Spotlight />/
+
+        <Spotlight />
        
         <Navbar />
         <Intro />
