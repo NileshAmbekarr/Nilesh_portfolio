@@ -286,8 +286,6 @@
   .intro-container{
     flex-direction: column;
   }
-
-  .
   .greeting {
     font-size: 2.5rem;
   }
@@ -320,3 +318,16 @@
   }
 }
 
+
+/* Rotating intro photo crossfade — outgoing and incoming canvases overlap */
+.intro-photo-stack {
+  position: relative;
+  width: 400px;
+  height: 700px;
+  max-width: 100%;
+}
+
+.intro-photo-layer {
+  position: absolute;
+  inset: 0;
+}
