@@ -1,0 +1,220 @@
+/* ══ Hero statement — black-themed take on the reference hero ══ */
+
+/* Heading font from the reference site (local woff2) */
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../../assets/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2') format('woff2');
+}
+
+.hero-statement {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 20px 70px;
+  overflow: hidden;
+  /* subtle dotted texture like the reference, in dark */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1.5px);
+  background-size: 26px 26px;
+}
+
+/* ── headline ── */
+
+.hs-headline {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+  /* single scale driver: photo + floats are sized/positioned in em,
+     so they stay locked to the text on every device size */
+  font-size: clamp(2.6rem, 9.5vw, 8.5rem);
+  /* reserve the photo's overhang (bottom: -0.85em on .hs-photo) as real
+     layout space so the buttons below can never overlap it */
+  margin-bottom: 0.85em;
+}
+
+.hs-title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* matches the reference's .hero-text-row */
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1em;
+  line-height: 0.9;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+
+.hs-line {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+}
+
+.hs-line--solid {
+  color: #fff;
+  z-index: 3; /* stays above the center photo */
+}
+
+.hs-line--outline {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #fff;
+  z-index: 1;
+}
+
+/* fallback for browsers without text-stroke */
+@supports not (-webkit-text-stroke: 2px #fff) {
+  .hs-line--outline {
+    color: rgba(255, 255, 255, 0.35);
+  }
+}
+
+/* ── center b&w photo cutout ── */
+
+.hs-photo {
+  position: absolute;
+  left: 50%;
+  bottom: -0.85em; /* sits lower, over the outline lines */
+  transform: translateX(-50%);
+  width: 2.7em; /* scales with the headline text */
+  z-index: 2; /* over the outline lines, under the solid line */
+}
+
+.hs-photo img {
+  display: block;
+  width: 100%;
+  filter: grayscale(1) contrast(1.06);
+  user-select: none;
+  transition: filter 0.45s ease;
+}
+
+/* colours in on hover */
+.hs-photo:hover img {
+  filter: grayscale(0) contrast(1);
+}
+
+/* ── floating face cutouts ── */
+
+.hs-float {
+  position: absolute;
+  z-index: 4;
+  width: 0.85em; /* scales with the headline text */
+  opacity: 0.7;
+}
+
+.hs-float img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: grayscale(1) contrast(1.05);
+  user-select: none;
+}
+
+/* anchored from the text centre in em, so the gap to the
+   headline stays identical on every screen size */
+.hs-float--left {
+  left: calc(50% - 4.9em);
+  top: 0;
+  animation: hs-float-a 5.5s ease-in-out infinite alternate;
+}
+
+.hs-float--right {
+  right: calc(50% - 4.9em);
+  bottom: 0.4em;
+  animation: hs-float-b 6.5s ease-in-out infinite alternate;
+  animation-delay: 0.8s;
+}
+
+@keyframes hs-float-a {
+  from { transform: translateY(-10px) rotate(-6deg); }
+  to   { transform: translateY(12px) rotate(4deg); }
+}
+
+@keyframes hs-float-b {
+  from { transform: translateY(10px) rotate(5deg); }
+  to   { transform: translateY(-12px) rotate(-5deg); }
+}
+
+/* ── buttons ── */
+
+.hs-actions {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* clean gap below the photo; the overhang itself is already
+     reserved by .hs-headline's margin-bottom */
+  margin-top: clamp(32px, 5vh, 52px);
+}
+
+.hs-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 34px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.hs-btn:hover {
+  transform: translateY(-3px);
+}
+
+.hs-btn--solid {
+  background: #fff;
+  color: #0a0a0a;
+  border: 1px solid #fff;
+}
+
+.hs-btn--solid:hover {
+  background: #e8e8e8;
+}
+
+.hs-btn--ghost {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.hs-btn--ghost:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ══ Responsive ══ */
+
+@media (max-width: 640px) {
+  .hero-statement {
+    min-height: auto;
+    padding: 80px 16px 60px;
+  }
+
+  .hs-line--outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.92);
+  }
+
+  .hs-actions {
+    margin-top: 40px;
+  }
+
+  .hs-btn {
+    padding: 13px 26px;
+  }
+}
