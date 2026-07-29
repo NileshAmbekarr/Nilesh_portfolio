@@ -5,7 +5,7 @@
 📧 nileshambekar9281@gmail.com | 📱 +91 9067768896
 🔗 [LinkedIn](#https://www.linkedin.com/in/nileshambekar/) · [GitHub](#https://github.com/NileshAmbekarr) · [Portfolio](#https://nileshisdev.netlify.app/) · [TakeUForward](#https://takeuforward.org/profile/nilesh_ambekar)
 
-![image](https://assets.devfolio.co/content/99f933b6655a4a55a91e47b62c
+![image](https://assets.devfolio.co/content/99f933b6655a4a55a91e47b62c0f248e/d9e80cb1-3c0a-471a-8987-d2c8757bf92a.png)
 
 ---
 
