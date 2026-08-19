@@ -81,7 +81,7 @@ const Intro = () => {
     };
   }, []);
 
-  const words = ["Web Apps", "Websites", "Jokes", "Apps", "very good Chai"];
+  const words = ["Web Apps", "Websites", "Jokes", "Mobile Apps", "Very Good Chai", "AI Agents", "Backend Systems"];
   return (
     <div className="intro-container" id='intro'>
       <div className='container'>
