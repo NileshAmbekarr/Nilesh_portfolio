@@ -2,6 +2,24 @@
 const project = [
   {
     id: 1,
+    title: 'SAAVI - Sehat Sathi',
+    description: 'Bilingual Voice AI Health-Access Agent',
+    points: [
+      'Built a Hindi/English real-time voice agent (STT → LLM → TTS) with a two-layer emergency escalation system — a deterministic phrase detector runs before the model on every turn, and helpline numbers are returned from constants so they can never be hallucinated; hardened against 59 adversarial red-team cases.',
+      'Cut time-to-first-response from 15–23s to 7.7s by instrumenting the connect path and hoisting a 2.2s per-call LLM client into worker prewarm; added SIP outbound calling with full call-outcome handling and consent-gated caller memory enforced in code, covered by 220 automated tests.',
+    ],
+    techStack: ['Python', 'LiveKit Agents', 'Murf Falcon TTS', 'Deepgram', 'Gemini', 'Next.js', 'TypeScript', 'SQLite', 'SIP/Twilio'],
+    year: '2026',
+    media: [
+      { type: 'image', src: '/projects/Saavi1.png' },
+      { type: 'image', src: '/projects/Saavi2.png' },
+      // { type: 'video', src: '/projects/sehatsathi-demo.mp4' },
+    ],
+    githubLink: 'https://github.com/NileshAmbekarr/murf-livekit-2026',
+    liveDemo: '',
+  },
+  {
+    id: 2,
     title: 'InternSync',
     description: ' Multi-Tenant Intern Management SaaS',
     points: [
@@ -18,23 +36,6 @@ const project = [
     ],
     githubLink: 'https://github.com/NileshAmbekarr/Internsync',
     liveDemo: 'https://intern-sync-client.vercel.app/',
-  },
-  {
-    id: 2,
-    title: 'Marathi-lang',
-    description: 'A Toy programming language that uses DevNagri script for its syntax',
-    points: [
-      'A toy programming language that uses the DevNagri script for its syntax.',
-      'Python-based interpreter shipped via pip, with a React playground to try it in the browser.',
-    ],
-    techStack: ['Python', 'pip', 'React', 'JavaScript'],
-    year: '2024',
-    media: [
-      { type: 'image', src: '/projects/marathilang1.png' },
-      { type: 'image', src: '/projects/marathilang2.png' },
-    ],
-    githubLink: 'https://github.com/NileshAmbekarr/Marathi-lang',
-    liveDemo: 'https://marathi-lang.netlify.app/',
   },
   {
     id: 3,
